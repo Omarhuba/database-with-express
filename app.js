@@ -22,7 +22,7 @@ app.get("/", async (req, res) => {
 
 app.get("/showMessage", async (req, res) => {
     await db.open("./database/messages.db");
-    const messages = await db.get("SELECT * FROM messages");
+    const messages = await db.all("SELECT * FROM messages");
     console.log(messages);
     await db.close();
     res.render('showMessage', {messages});
