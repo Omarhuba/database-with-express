@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="/messages" method="POST">
+            <select name="to_department">
+                <% for(let department of departments){ %>
+                    <option value="<%= department.department_id %> "><%= department.name %> </option>
+               <% } %> 
+            </select>
+            <input type="text" name="email" placeholder="Your e-mail">
+            <input type="text" name="title" placeholder="Title of your question">
+            <textarea name="question" cols="30" rows="10" placeholder="Type your question"></textarea>
+            <button>ASK!!!!</button>
+        </form>
+    </div>
+    <h1>hello</h1>
+</body>
+</html>
