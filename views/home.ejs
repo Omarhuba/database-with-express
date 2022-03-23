@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="wrapper">
-        <form action="/messages" method="POST">
+        <form action="/message" method="POST">
             <select name="to_department">
                 <% for(let department of departments){ %>
                     <option value="<%= department.department_id %> "><%= department.name %> </option>
@@ -20,6 +21,5 @@
             <button>ASK!!!!</button>
         </form>
     </div>
-    <h1>hello</h1>
 </body>
 </html>

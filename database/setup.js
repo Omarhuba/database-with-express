@@ -1,12 +1,12 @@
-const {PromisedDatabase} = require('promised-sqlite3')
+const { PromisedDatabase } = require("promised-sqlite3");
 
-const db = new PromisedDatabase()
+const db = new PromisedDatabase();
 
-async function setup(){
-    await db.open('./database/messages.db')
+async function setup() {
+  await db.open("./database/messages.db");
 
-// For multiple statement db.exec
-    db.exec(`
+  // For multiple statement db.exec
+  db.exec(`
     DROP TABLE IF EXISTS departments; 
     DROP TABLE IF EXISTS messages;
 
@@ -27,7 +27,7 @@ async function setup(){
         FOREIGN KEY(department_id)
             REFERENCES departments (department_id)
     );
-    `)    
-    await db.close()
+    `);
+  await db.close();
 }
-setup()
+setup();
