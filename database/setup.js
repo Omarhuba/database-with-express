@@ -6,6 +6,7 @@ async function setup() {
   await db.open("./database/messages.db");
 
   // For multiple statement db.exec
+  //DROP delete table om det finns,
   db.exec(`
     DROP TABLE IF EXISTS departments; 
     DROP TABLE IF EXISTS messages;

@@ -12,7 +12,7 @@
         <form action="/message" method="POST">
             <select name="to_department">
                 <% for(let department of departments){ %>
-                    <option value="<%= department.department_id %> "><%= department.name %> </option>
+                    <option value="<%= department.department_id %>" ><%= department.name %> </option>
                <% } %> 
             </select>
             <input type="text" name="email" placeholder="Your e-mail">
